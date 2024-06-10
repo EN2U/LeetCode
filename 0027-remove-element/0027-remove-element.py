@@ -2,7 +2,6 @@ class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
         total_ocurrences = len(nums)
         i = k = 0
-        new_array = []
 
         while i < len(nums):
             if not nums[i] == val:
