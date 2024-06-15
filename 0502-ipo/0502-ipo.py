@@ -1,32 +1,31 @@
 class Solution:
     def findMaximizedCapital(self, k: int, w: int, profits: List[int], capital: List[int]) -> int:
-        new_list = [(i, capital[i], profits[i]) for i in range(len(profits))]
+        profit_capital = [(capital[i], profits[i]) for i in range(len(profits))]
 
-        new_list.sort(key=lambda tuple: tuple[1])
+        profit_capital.sort(key=lambda tuple: tuple[0])
 
-        tmp_list = []
+        valid_capital_candidates = []
 
         idx = 0
-        while k != 0 and idx < len(new_list):
-            if w >= new_list[idx][1]:
-                tmp_list.append((idx, new_list[idx][1], new_list[idx][2]))
-            elif not tmp_list:
-                return w
-            else:
-                tmp_list.sort(key=lambda tuple: tuple[2])
-                w += tmp_list.pop(-1)[2]
-                k -= 1
+
+        while k != 0 and idx < len(profit_capital):
+            if w >= profit_capital[idx][0]:
+                valid_capital_candidates.append((profit_capital[idx][0], profit_capital[idx][1]))
+                idx += 1
                 continue
+            
+            if not valid_capital_candidates:
+                return w
+            
+            valid_capital_candidates.sort(key=lambda tuple: tuple[1])
+            w += valid_capital_candidates.pop(-1)[1]
+            k -= 1
 
-            idx += 1
-
-                
-        if tmp_list and k != 0:
-            tmp_list.sort(key=lambda tuple: tuple[2])
-            while tmp_list:
-                if k  == 0:
-                    break
-                w += tmp_list.pop(-1)[2]
+    
+        if valid_capital_candidates and k != 0:
+            valid_capital_candidates.sort(key=lambda tuple: tuple[1])
+            while valid_capital_candidates and k != 0:
+                w += valid_capital_candidates.pop(-1)[1]
                 k -= 1
 
         return w
