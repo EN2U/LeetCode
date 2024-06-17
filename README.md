@@ -23,6 +23,7 @@
 |  |
 | ------- |
 | [0523-continuous-subarray-sum](https://github.com/EN2U/LeetCode/tree/master/0523-continuous-subarray-sum) |
+| [0633-sum-of-square-numbers](https://github.com/EN2U/LeetCode/tree/master/0633-sum-of-square-numbers) |
 # Prefix Sum
 |  |
 | ------- |
@@ -49,6 +50,7 @@
 | [0027-remove-element](https://github.com/EN2U/LeetCode/tree/master/0027-remove-element) |
 | [0075-sort-colors](https://github.com/EN2U/LeetCode/tree/master/0075-sort-colors) |
 | [0088-merge-sorted-array](https://github.com/EN2U/LeetCode/tree/master/0088-merge-sorted-array) |
+| [0633-sum-of-square-numbers](https://github.com/EN2U/LeetCode/tree/master/0633-sum-of-square-numbers) |
 # Greedy
 |  |
 | ------- |
@@ -60,3 +62,7 @@
 |  |
 | ------- |
 | [0502-ipo](https://github.com/EN2U/LeetCode/tree/master/0502-ipo) |
+# Binary Search
+|  |
+| ------- |
+| [0633-sum-of-square-numbers](https://github.com/EN2U/LeetCode/tree/master/0633-sum-of-square-numbers) |
